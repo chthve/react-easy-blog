@@ -2,9 +2,7 @@ import * as React from 'react'
 
 import { SocialMediaContainer, Button, Link } from './styles'
 
-export interface SocialMediaProps {}
-
-export default function SocialMedia(props: SocialMediaProps) {
+export default function SocialMedia() {
   return (
     <SocialMediaContainer>
       <Button>

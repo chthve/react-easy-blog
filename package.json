@@ -62,6 +62,7 @@
   ],
   "dependencies": {
     "@types/styled-components": "^5.1.4",
+    "moment": "^2.29.1",
     "styled-components": "^5.2.1"
   }
 }

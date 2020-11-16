@@ -24,8 +24,8 @@ export interface BannerProps {
 
 const defaultTheme = {
   size: {
-    width: '1000px',
-    height: '700px'
+    width: '800px',
+    height: '500px'
   },
   style: 1,
   fontColor: 'black',

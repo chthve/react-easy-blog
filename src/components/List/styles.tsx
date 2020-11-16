@@ -5,11 +5,13 @@ import styled from 'styled-components'
 export const ListContainer = styled.div`
   display: flex;
   position: relative;
+  background-color: white;
   flex-direction: ${(props: any) =>
     props.theme.imagePosition === 'right' ? 'row-reverse' : 'row'};
   height: ${(props: any) => props.theme.size.height};
   width: ${(props: any) => props.theme.size.width};
   margin: 2rem;
+  padding: 1.5rem;
 `
 
 export const Separation = styled.div`
@@ -49,6 +51,7 @@ export const TextContainer = styled.div`
 export const TitleText = styled.p`
   width: 95%;
   font-size: ${(props: any) => props.theme.largeFont};
+  margin-top: 0.2rem;
   font-weight: bold;
 `
 

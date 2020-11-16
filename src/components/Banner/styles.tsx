@@ -35,7 +35,7 @@ export const BannerTextContainer = styled.div`
   height: ${(props: any) => (props.theme.style === 2 ? '40%' : '70%')};
   border: none;
   border-radius: none;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgb(255, 255, 255, 0.2);
   box-shadow: ${(props: any) =>
     props.theme.style === 2 ? '' : '0 25px 60px rgba(0,0,0,.8)'};
 `
