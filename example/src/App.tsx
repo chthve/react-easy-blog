@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-easy-blog-post-component'
-import 'react-easy-blog-post-component/dist/index.css'
+import Banner from 'react-easy-blog-post-component'
+import { article } from './mocks.json'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Banner article={article} theme={{}} />
 }
 
 export default App
