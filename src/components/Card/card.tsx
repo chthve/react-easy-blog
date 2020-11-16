@@ -42,7 +42,7 @@ const defaultTheme = {
   socialMediaBackground: false,
   size: {
     height: '500px',
-    width: '700px'
+    width: '460px'
   }
 }
 
