@@ -34,9 +34,9 @@ interface CardProps {
 const defaultTheme = {
   primary: 'rgb(230, 96, 96)',
   secondary: 'white',
-  smallFont: '12px',
-  mediumFont: 'px',
-  largeFont: '20px',
+  smallFont: '14px',
+  mediumFont: '16px',
+  largeFont: '18px',
   backgroundColor: 'white',
   fontFamily: 'Times New Roman',
   border: false,

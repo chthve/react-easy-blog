@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import { BannerContainer } from './styles'
@@ -18,6 +18,7 @@ export interface BannerProps {
     width?: string
     height?: string
   }
+  hover?: boolean
 }
 
 const defaultTheme = {
@@ -27,19 +28,34 @@ const defaultTheme = {
   fontColor: 'black',
   hoverButton: true,
   largeFont: '20px',
-  mediumFont: '15px',
+  mediumFont: '16px',
   fontFamily: 'New Times Roman',
   primary: 'white'
 }
 
-export default function Banner({ article, theme }: BannerProps) {
+export default function Banner({ article, theme, hover }: BannerProps) {
   Object.assign(defaultTheme, theme)
+  const [isShown, setIsShown] = useState(false)
+  function toggleShow() {
+    setIsShown(!isShown)
+  }
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BannerContainer>
-        <Image image={article.image} />
-        <Text article={article} />
-      </BannerContainer>
+      {hover && (
+        <BannerContainer
+          onMouseEnter={() => toggleShow()}
+          onMouseLeave={() => toggleShow()}
+        >
+          <Image image={article.image} />
+          {isShown && <Text article={article} />}
+        </BannerContainer>
+      )}
+      {!hover && (
+        <BannerContainer>
+          <Image image={article.image} />
+          <Text article={article} />
+        </BannerContainer>
+      )}
     </ThemeProvider>
   )
 }

@@ -11,22 +11,27 @@ export default function Color({ theme, setTheme }: ColorProps) {
     setTheme({ ...theme, [name]: value })
   }
   return (
-    <div className='color-container'>
+    <>
       <h2>Pick your colors</h2>
-      <label className='label'>Primary Color</label>
-      <input
-        className='input-color'
-        type='color'
-        name='primary'
-        onChange={handleChange}
-      />
-      <label className='label'>Secondary Color</label>
-      <input
-        className='input-color'
-        type='color'
-        name='secondary'
-        onChange={handleChange}
-      />
-    </div>
+      <div className='separation-line'>
+        <hr />
+      </div>
+      <div className='color-container'>
+        <label className='label pick'>Primary Color</label>
+        <input
+          className='input-color pick'
+          type='color'
+          name='primary'
+          onChange={handleChange}
+        />
+        <label className='label pick'>Secondary Color</label>
+        <input
+          className='input-color pick'
+          type='color'
+          name='secondary'
+          onChange={handleChange}
+        />
+      </div>
+    </>
   )
 }

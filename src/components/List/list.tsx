@@ -33,7 +33,7 @@ const defaultTheme = {
   height: '170px',
   smallFont: '14px',
   mediumFont: '16px',
-  largeFont: '18px',
+  largeFont: '16px',
   fontFamily: 'New Times Roman',
   fontColor: 'black',
   imagePosition: 'left',

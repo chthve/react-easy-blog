@@ -11,6 +11,7 @@ const App = () => {
   const [theme, setTheme] = useState({})
   const [socialMedia, setSocialMedia] = useState(false)
   const [showCategory, setShowCategory] = useState(true)
+  const [hover, setHover] = useState(false)
   const [article, setArticle] = useState({
     title:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -31,7 +32,9 @@ const App = () => {
     <>
       <div className='main-container'>
         <div className='left-container'>
-          {component === 'banner' && <Banner article={article} theme={theme} />}
+          {component === 'banner' && (
+            <Banner article={article} theme={theme} hover={hover} />
+          )}
           {component === 'card' && (
             <Card article={article} theme={theme} socialMedia={socialMedia} />
           )}
@@ -41,8 +44,11 @@ const App = () => {
         </div>
         <div className='right-container'>
           <h1>Save some time to create your post !</h1>
+          <h2>Compose your article</h2>
+          <div className='separation-line'>
+            <hr />
+          </div>
           <div className='article-container'>
-            <h2>Compose your article</h2>
             <label className='label'>Image</label>
             <input
               className='input'
@@ -70,7 +76,7 @@ const App = () => {
               onChange={(e) => handleInputChange(e, 'author')}
             />
           </div>
-          <ComponentStyle setComponent={setComponent} />
+          <ComponentStyle component={component} setComponent={setComponent} />
           <Size theme={theme} setTheme={setTheme} style={component} />
           <FontSelector theme={theme} setTheme={setTheme} />
           <Color theme={theme} setTheme={setTheme} />
@@ -78,8 +84,12 @@ const App = () => {
             style={component}
             theme={theme}
             setTheme={setTheme}
+            socialMedia={socialMedia}
             setSocialMedia={setSocialMedia}
+            showCategory={showCategory}
             setShowCategory={setShowCategory}
+            hover={hover}
+            setHover={setHover}
           />
         </div>
       </div>

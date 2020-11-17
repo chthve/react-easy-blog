@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Trispace', serif;
   margin-top: 2rem;
+  color: #aaaaaa;
 }
 
 h2 {
-  text-align: center;
-  margin: 2rem;
+  font-family: 'Trispace', serif;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  color: 'black';
 }
 
 /* Containers */
@@ -54,20 +59,21 @@ h2 {
 .article-container {
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 
 .label {
   font-size: 15px;
   font-weight: bold;
   margin-top: 1rem;
+  font-family: 'Trispace', serif;
 }
 
 .input {
   width: 500px;
   padding: 0.5rem;
   border: none;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
   outline: none;
 }
 
@@ -76,18 +82,21 @@ h2 {
 .button-container {
   display: flex;
   flex-direction: row;
+  margin-top: 4rem;
 }
 
 .button {
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   margin: 1rem;
   border: none;
   font-weight: bold;
   font-size: 1rem;
-  background-color: #dddddd;
+  background-color: #9ba4b4;
+  margin-right: 4rem;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 /* Font-Rules */
@@ -95,9 +104,118 @@ h2 {
 .font-rule-container {
   display: flex;
   flex-direction: column;
+  margin-top: 4rem;
 }
 
+/* Size-rule */
 .size-container {
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
+}
+
+/* color-rule */
+
+.color-container {
+  margin-top: 4rem;
+}
+
+.pick {
+  margin-left: 1rem;
+}
+
+/* Options-container */
+
+.options-container {
+  padding: 4rem;
+}
+
+.fontButton {
+  padding: 1rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 2rem;
+  background-color: #9ba4b4;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.fontRule {
+  margin-left: 5rem;
+}
+
+.activated-styled {
+  padding: 1rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 2rem;
+  background-color: 'black';
+  color: 'white';
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+}
+
+/* Activated Component */
+
+.activated-component {
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+
+input[type='range'] {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 500px; /* Full-width */
+  height: 8px; /* Specified height */
+  background: #f1f6f9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+input[type='range']:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* Theinput[type=range] handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  width: 25px; /* Set a specificinput[type=range] handle width */
+  height: 25px; /*input[type=range] handle height */
+  background: #14274e; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 100px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.separation-line {
+  width: 90%;
+  height: 5px;
+  background-color: black;
+}
+
+select {
+  background-color: #f1f6f9;
+  border: none;
+  font-family: 'Trispace', serif;
+  height: 25px;
+  margin-top: 1rem;
 }
