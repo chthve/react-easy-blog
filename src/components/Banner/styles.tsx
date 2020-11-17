@@ -7,9 +7,13 @@ export const BannerContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  height: ${(props: any) => props.theme.size.height};
-  width: ${(props: any) => props.theme.size.width};
+  height: ${(props: any) => props.theme.height};
+  width: ${(props: any) => props.theme.width};
   margin-top: 2rem;
+  min-width: 400px;
+  min-height: 350px;
+  max-width: 1000px;
+  max-height: 1000px;
 `
 
 // Image
@@ -33,6 +37,7 @@ export const BannerTextContainer = styled.div`
   bottom: ${(props: any) => (props.theme.style === 2 ? '0' : '')};
   width: ${(props: any) => (props.theme.style === 2 ? '100%' : '80%')};
   height: ${(props: any) => (props.theme.style === 2 ? '40%' : '70%')};
+  font-family: ${(props: any) => props.theme.fontFamily};
   border: none;
   border-radius: none;
   background-color: rgb(255, 255, 255, 0.2);
@@ -79,7 +84,5 @@ export const BannerButton = styled.button`
     background-color: ${(props: any) =>
       props.theme.hoverButton ? props.theme.fontColor : 'transparent'};
     color: ${(props: any) =>
-      props.theme.hoverButton
-        ? 'rgba(255, 255, 255, 1)'
-        : props.theme.fontColor};
+      props.theme.hoverButton ? props.theme.primary : props.theme.fontColor};
 `

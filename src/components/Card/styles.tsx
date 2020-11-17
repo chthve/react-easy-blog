@@ -6,19 +6,25 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props: any) => props.theme.backgroundColor};
-  height: ${(props: any) => props.theme.size.height};
-  width: ${(props: any) => props.theme.size.width};
+  height: ${(props: any) => props.theme.height};
+  width: ${(props: any) => props.theme.width};
   border: ${(props: any) =>
     props.theme.border ? `solid 1px ${props.theme.primary}` : 'none'};
   font-family: ${(props: any) => props.theme.fontFamily};
   margin-top: 2rem;
+  min-height: 350px;
+  min-width: 350px;
+  max-height: 550px;
+  max-width: 550px;
 `
 
 // Image Styling
 
 export const ImageContainer = styled.div`
   position: relative;
-  width: ${(props: any) => props.theme.size.width};
+  width: ${(props: any) => props.theme.width};
+  min-width: 350px;
+  max-width: 550px;
   background-color: orange;
   height: 100%;
 `

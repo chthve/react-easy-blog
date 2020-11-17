@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import Image from './image'
 import { ListContainer, Separation } from './styles'
 import Text from './text'
+import Category from './category'
 
 export interface ListProps {
   article?: {
@@ -11,13 +12,12 @@ export interface ListProps {
     description?: string
     author?: string
     date?: number
+    category?: string
   }
 
   theme: {
-    size?: {
-      width?: string
-      height?: string
-    }
+    width?: string
+    height?: string
     imagePostion?: string
     primary?: string
     secondary?: string
@@ -25,26 +25,28 @@ export interface ListProps {
     mediumFont?: string
     largeFont?: string
   }
+  showCategory?: boolean
 }
 
 const defaultTheme = {
-  size: {
-    width: '700px',
-    height: '170px'
-  },
+  width: '700px',
+  height: '170px',
   smallFont: '14px',
   mediumFont: '16px',
   largeFont: '18px',
+  fontFamily: 'New Times Roman',
+  fontColor: 'black',
   imagePosition: 'left',
-  primary: '#af2d2d',
-  secondary: 'black'
+  primary: 'rgb(230, 96, 96)',
+  secondary: 'white'
 }
 
-export default function List({ article, theme }: ListProps) {
+export default function List({ article, theme, showCategory }: ListProps) {
   Object.assign(defaultTheme, theme)
   return (
     <ThemeProvider theme={defaultTheme}>
       <ListContainer>
+        {showCategory && <Category content={article && article.category} />}
         <Image image={article && article.image} />
         <Text article={article && article} />
         <Separation />

@@ -4,7 +4,6 @@
 }
 
 h1 {
-  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 2rem;
 }
@@ -14,9 +13,10 @@ h2 {
   margin: 2rem;
 }
 
+/* Containers */
+
 .main-container {
   display: flex;
-  align-items: row;
 }
 
 .left-container {
@@ -24,7 +24,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 50vw;
+  width: 60vw;
   background: rgb(228, 216, 197);
   background: linear-gradient(
     0deg,
@@ -37,7 +37,9 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
   width: 50vw;
+  height: 100vh;
   background: rgb(228, 216, 197);
   background: linear-gradient(
     0deg,
@@ -47,25 +49,29 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Article */
+
 .article-container {
   display: flex;
   flex-direction: column;
   margin-top: 10rem;
 }
 
-.article-label {
+.label {
   font-size: 15px;
   font-weight: bold;
   margin-top: 1rem;
 }
 
-.article-input {
+.input {
   width: 500px;
   padding: 0.5rem;
   border: none;
   margin-top: 0.7rem;
   outline: none;
 }
+
+/* Component Choise */
 
 .button-container {
   display: flex;
@@ -84,6 +90,14 @@ h2 {
   cursor: pointer;
 }
 
-.next {
-  align-self: flex-end;
+/* Font-Rules */
+
+.font-rule-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-container {
+  display: flex;
+  flex-direction: column;
 }

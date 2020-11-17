@@ -8,10 +8,14 @@ export const ListContainer = styled.div`
   background-color: white;
   flex-direction: ${(props: any) =>
     props.theme.imagePosition === 'right' ? 'row-reverse' : 'row'};
-  height: ${(props: any) => props.theme.size.height};
-  width: ${(props: any) => props.theme.size.width};
+  height: ${(props: any) => props.theme.height};
+  width: ${(props: any) => props.theme.width};
   margin: 2rem;
   padding: 1.5rem;
+  min-height: 170px;
+  min-width: 550px;
+  max-height: 500px;
+  max-width: 800px;
 `
 
 export const Separation = styled.div`
@@ -44,6 +48,8 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 75%;
+  font-family: ${(props: any) => props.theme.fontFamily};
+  color: ${(props: any) => props.theme.fontColor};
 `
 
 // Title
@@ -79,4 +85,29 @@ export const InfoText = styled.p`
   font-size: ${(props: any) => props.theme.smallFont};
   color: ${(props: any) => props.theme.primary};
   margin: 2rem;
+`
+
+// Category
+
+export const CategoryContainer = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  right: ${(props: any) =>
+    props.theme.imagePosition === 'right' ? '' : '-10px'};
+  left: ${(props: any) =>
+    props.theme.imagePosition === 'left' ? '' : '-10px'};
+  width: 78px;
+  height: 28px;
+  background-color: ${(props: any) => props.theme.primary};
+`
+
+export const CategoryText = styled.p`
+  font-size: ${(props: any) => props.theme.smallFont};
+  font-weight: bold;
+  text-transform: uppercase;
+  color: ${(props: any) => props.theme.secondary};
+  text-align: center;
 `

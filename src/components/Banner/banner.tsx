@@ -15,23 +15,21 @@ export interface BannerProps {
     image: string
   }
   theme: {
-    size?: {
-      width?: string
-      height?: string
-    }
+    width?: string
+    height?: string
   }
 }
 
 const defaultTheme = {
-  size: {
-    width: '800px',
-    height: '500px'
-  },
+  width: '800px',
+  height: '500px',
   style: 1,
   fontColor: 'black',
   hoverButton: true,
   largeFont: '20px',
-  mediumFont: '15px'
+  mediumFont: '15px',
+  fontFamily: 'New Times Roman',
+  primary: 'white'
 }
 
 export default function Banner({ article, theme }: BannerProps) {

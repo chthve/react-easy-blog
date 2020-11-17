@@ -11,6 +11,7 @@ export interface TextProps {
     description?: string
     author?: string
     date?: number
+    category?: string
   }
 }
 

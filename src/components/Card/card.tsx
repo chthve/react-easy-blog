@@ -28,11 +28,12 @@ interface CardProps {
     }
   }
   dateFormat?: string
+  socialMedia?: boolean
 }
 
 const defaultTheme = {
-  primary: '#af2d2d',
-  secondary: 'black',
+  primary: 'rgb(230, 96, 96)',
+  secondary: 'white',
   smallFont: '12px',
   mediumFont: 'px',
   largeFont: '20px',
@@ -40,18 +41,16 @@ const defaultTheme = {
   fontFamily: 'Times New Roman',
   border: false,
   socialMediaBackground: false,
-  size: {
-    height: '500px',
-    width: '460px'
-  }
+  height: '500px',
+  width: '460px'
 }
 
-export default function Card({ article, theme }: CardProps) {
+export default function Card({ article, theme, socialMedia }: CardProps) {
   Object.assign(defaultTheme, theme)
   return (
     <ThemeProvider theme={defaultTheme}>
       <CardContainer>
-        <Image image={article.image} />
+        <Image image={article.image} socialMedia={socialMedia} />
         <Text article={article} />
       </CardContainer>
     </ThemeProvider>
