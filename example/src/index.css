@@ -144,8 +144,12 @@ h2 {
   opacity: 0.6;
 }
 
+.fontRuleTwo {
+  margin-bottom: 1rem;
+}
+
 .fontRule {
-  margin-left: 5rem;
+  margin-left: 4rem;
 }
 
 .activated-styled {
@@ -218,4 +222,12 @@ select {
   font-family: 'Trispace', serif;
   height: 25px;
   margin-top: 1rem;
+}
+
+.toggle-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }

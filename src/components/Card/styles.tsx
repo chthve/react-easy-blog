@@ -25,7 +25,6 @@ export const ImageContainer = styled.div`
   width: ${(props: any) => props.theme.width};
   min-width: 350px;
   max-width: 550px;
-  background-color: orange;
   height: 100%;
 `
 

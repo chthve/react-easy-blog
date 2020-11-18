@@ -54,126 +54,154 @@ export default function OptionsContainer({
       <div className='options-container'>
         {style === 'banner' && (
           <section className='banner-options'>
-            <label className='label fontRule'>Style</label>
-            <button
-              className={` fontButton ${
-                theme && theme.style === 1 ? 'activated-component' : ''
-              }`}
-              onClick={() => handleBannerStyle(1)}
-            >
-              1
-            </button>
-            <button
-              className={` fontButton ${
-                theme && theme.style === 2 ? 'activated-component' : ''
-              }`}
-              onClick={() => handleBannerStyle(2)}
-            >
-              2
-            </button>
-            <label className='label fontRule'>Hovering</label>
-            <button
-              className={` fontButton ${
-                hover && hover ? 'activated-component' : ''
-              }`}
-              onClick={() => handleHover(true)}
-            >
-              Yes
-            </button>
-            <button
-              className={` fontButton ${
-                hover === false ? 'activated-component' : ''
-              }`}
-              onClick={() => handleHover(false)}
-            >
-              No
-            </button>
+            <div className='toggle-component'>
+              <label className='label fontRuleTwo'>Style</label>
+              <div className='social-media-button'>
+                <button
+                  className={` fontButton ${
+                    theme && theme.style === 1 ? 'activated-component' : ''
+                  }`}
+                  onClick={() => handleBannerStyle(1)}
+                >
+                  1
+                </button>
+                <button
+                  className={` fontButton ${
+                    theme && theme.style === 2 ? 'activated-component' : ''
+                  }`}
+                  onClick={() => handleBannerStyle(2)}
+                >
+                  2
+                </button>
+              </div>
+            </div>
+            <div className='toggle-component'>
+              <label className='label fontRuleTwo'>Hovering</label>
+              <div className='social-media-button'>
+                <button
+                  className={` fontButton ${
+                    hover && hover ? 'activated-component' : ''
+                  }`}
+                  onClick={() => handleHover(true)}
+                >
+                  Yes
+                </button>
+                <button
+                  className={` fontButton ${
+                    hover === false ? 'activated-component' : ''
+                  }`}
+                  onClick={() => handleHover(false)}
+                >
+                  No
+                </button>
+              </div>
+            </div>
           </section>
         )}
         {style === 'card' && (
           <section className='banner-options'>
-            <label className='label fontRule'>Social Media</label>
-            <button
-              className={` fontButton ${
-                socialMedia && socialMedia === true ? 'activated-component' : ''
-              }`}
-              onClick={() => handleSocialMedia(true)}
-            >
-              Yes
-            </button>
-            <button
-              className={` fontButton ${
-                socialMedia === false ? 'activated-component' : ''
-              }`}
-              onClick={() => handleSocialMedia(false)}
-            >
-              No
-            </button>
-            <label className='label fontRule'>Social Media Background</label>
-            <button
-              className={` fontButton ${
-                theme && theme.socialMediaBackground === true
-                  ? 'activated-component'
-                  : ''
-              }`}
-              onClick={() => handleSocialMediaBackground(true)}
-            >
-              Yes
-            </button>
-            <button
-              className={` fontButton ${
-                theme && theme.socialMediaBackground === false
-                  ? 'activated-component'
-                  : ''
-              }`}
-              onClick={() => handleSocialMediaBackground(false)}
-            >
-              No
-            </button>
+            <div className='toggle-component'>
+              <label className='label fontRuleTwo'>Social Media</label>
+              <div className='social-media-button'>
+                <button
+                  className={` fontButton ${
+                    socialMedia && socialMedia === true
+                      ? 'activated-component'
+                      : ''
+                  }`}
+                  onClick={() => handleSocialMedia(true)}
+                >
+                  Yes
+                </button>
+                <button
+                  className={` fontButton ${
+                    socialMedia === false ? 'activated-component' : ''
+                  }`}
+                  onClick={() => handleSocialMedia(false)}
+                >
+                  No
+                </button>
+              </div>
+            </div>
+            <div className='toggle-component'>
+              <label className='label fontRuleTwo'>
+                Social Media Background
+              </label>
+              <div className='social-media-button'>
+                <button
+                  className={` fontButton ${
+                    theme && theme.socialMediaBackground === true
+                      ? 'activated-component'
+                      : ''
+                  }`}
+                  onClick={() => handleSocialMediaBackground(true)}
+                >
+                  Yes
+                </button>
+                <button
+                  className={` fontButton ${
+                    theme && theme.socialMediaBackground === false
+                      ? 'activated-component'
+                      : ''
+                  }`}
+                  onClick={() => handleSocialMediaBackground(false)}
+                >
+                  No
+                </button>
+              </div>
+            </div>
           </section>
         )}
         {style === 'list' && (
           <section className='banner-options'>
-            <label className='label fontRule'>Side of the image</label>
-            <button
-              className={` fontButton ${
-                theme && theme.imagePosition === 'left'
-                  ? 'activated-component'
-                  : ''
-              }`}
-              onClick={() => handleImageSide('left')}
-            >
-              Left
-            </button>
-            <button
-              className={` fontButton ${
-                theme && theme.imagePosition === 'right'
-                  ? 'activated-component'
-                  : ''
-              }`}
-              onClick={() => handleImageSide('right')}
-            >
-              Right
-            </button>
-            <label className='label fontRule'>Show Category</label>
-            <button
-              className={` fontButton ${
-                showCategory && showCategory === true
-                  ? 'activated-component'
-                  : ''
-              }`}
-              onClick={() => handleShowCategory(true)}
-            >
-              Yes
-            </button>
-            <button
-              className={` fontButton ${
-                showCategory === false ? 'activated-component' : ''
-              }`}
-              onClick={() => handleShowCategory(false)}
-            >
-              No
-            </button>
+            <div className='toggle-component'>
+              <label className='label fontRuleTwo'>Side of the image</label>
+              <div className='social-media-button'>
+                <button
+                  className={` fontButton ${
+                    theme && theme.imagePosition === 'left'
+                      ? 'activated-component'
+                      : ''
+                  }`}
+                  onClick={() => handleImageSide('left')}
+                >
+                  Left
+                </button>
+                <button
+                  className={` fontButton ${
+                    theme && theme.imagePosition === 'right'
+                      ? 'activated-component'
+                      : ''
+                  }`}
+                  onClick={() => handleImageSide('right')}
+                >
+                  Right
+                </button>
+              </div>
+            </div>
+            <div className='toggle-component'>
+              <label className='label fontRuleTwo'>Show Category</label>
+              <div className='social-media-button'>
+                <button
+                  className={` fontButton ${
+                    showCategory && showCategory === true
+                      ? 'activated-component'
+                      : ''
+                  }`}
+                  onClick={() => handleShowCategory(true)}
+                >
+                  Yes
+                </button>
+                <button
+                  className={` fontButton ${
+                    showCategory === false ? 'activated-component' : ''
+                  }`}
+                  onClick={() => handleShowCategory(false)}
+                >
+                  No
+                </button>
+              </div>
+            </div>
           </section>
         )}
       </div>
