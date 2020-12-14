@@ -88,7 +88,7 @@ export const FontSelector: React.FC<FontSelectorProps> = ({
             type='range'
             min='5'
             max='20'
-            value={theme.smallFont ? theme.smallFont.slice(0, -2) : '14'}
+            value={theme.smallFont ? theme.smallFont.slice(0, -2) : '10'}
             name='smallFont'
             onChange={handleChange}
           />
@@ -98,7 +98,7 @@ export const FontSelector: React.FC<FontSelectorProps> = ({
             type='range'
             min='10'
             max='25'
-            value={theme.mediumFont ? theme.mediumFont.slice(0, -2) : '16'}
+            value={theme.mediumFont ? theme.mediumFont.slice(0, -2) : '12'}
             name='mediumFont'
             onChange={handleChange}
           />
@@ -108,6 +108,7 @@ export const FontSelector: React.FC<FontSelectorProps> = ({
             type='range'
             min='15'
             max='30'
+            value={theme.largeFont ? theme.largeFont.slice(0, -2) : '14'}
             name='largeFont'
             onChange={handleChange}
           />
@@ -116,7 +117,6 @@ export const FontSelector: React.FC<FontSelectorProps> = ({
             className='input-color'
             type='color'
             name='fontColor'
-            value={theme.largeFont ? theme.largeFont.slice(0, -2) : '20'}
             onChange={handleChange}
           />
         </div>
