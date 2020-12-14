@@ -236,7 +236,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 35vw;
   border: 1px solid #bbbb;
   background-color: #ffff;
   font-size: 12px;
@@ -263,7 +263,7 @@ select {
   background-color: white;
   border: 1px solid #bbbb;
   line-height: 1.5rem;
-  width: 40vw;
+  width: 35vw;
   padding: 2rem 1rem;
   margin-top: 3rem;
   font-size: 12px;
