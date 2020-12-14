@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Banner, Card, List } from 'react-easy-blog-post-component'
+import { Banner, Card, List } from 'react-easy-blog-post'
 import { Intro } from './components/intro'
 import { Article } from './components/article'
 import { FontSelector } from './components/fontSelector'

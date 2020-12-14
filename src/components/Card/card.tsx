@@ -35,15 +35,15 @@ interface CardProps {
 const defaultTheme = {
   primary: 'rgb(230, 96, 96)',
   secondary: 'white',
-  smallFont: '14px',
-  mediumFont: '16px',
-  largeFont: '18px',
+  smallFont: '10px',
+  mediumFont: '12px',
+  largeFont: '14px',
   backgroundColor: 'white',
   fontFamily: 'Times New Roman',
   border: false,
   socialMediaBackground: false,
-  height: '500px',
-  width: '460px'
+  height: '300px',
+  width: '260px'
 }
 
 export default function Card({

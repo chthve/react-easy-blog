@@ -7,13 +7,15 @@
 
 h1 {
   font-family: 'Trispace', serif;
+  font-size: 20px;
   margin-top: 2rem;
   color: #aaaaaa;
 }
 
 h2 {
   font-family: 'Trispace', serif;
-  margin-top: 8rem;
+  font-size: 18px;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   color: 'black';
 }
@@ -59,11 +61,11 @@ h2 {
 .article-container {
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .label {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold;
   margin-top: 1rem;
   font-family: 'Trispace', serif;
@@ -86,11 +88,12 @@ h2 {
 }
 
 .button {
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.2rem;
   margin: 1rem;
   border: none;
+  font-size: 14px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background-color: #9ba4b4;
   margin-right: 4rem;
   border-radius: 5px;
@@ -131,10 +134,10 @@ h2 {
 }
 
 .fontButton {
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.2rem;
   border: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-left: 2rem;
   background-color: #9ba4b4;
   border-radius: 5px;
@@ -146,10 +149,6 @@ h2 {
 
 .fontRuleTwo {
   margin-bottom: 1rem;
-}
-
-.fontRule {
-  margin-left: 4rem;
 }
 
 .activated-styled {
@@ -238,16 +237,16 @@ select {
   justify-content: center;
   align-items: center;
   width: 40vw;
-  border: 2px solid #bbbb;
+  border: 1px solid #bbbb;
   background-color: #ffff;
-  font-size: 16px;
+  font-size: 12px;
   font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
     'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
     'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
     monospace;
   text-align: left;
-  padding: 2rem 1rem;
-  margin: 3rem 0;
+  padding: 1rem 1rem;
+  margin: 2rem 0;
 }
 
 .code_snippet pre {
@@ -262,12 +261,12 @@ select {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border: 2px solid #bbbb;
+  border: 1px solid #bbbb;
   line-height: 1.5rem;
   width: 40vw;
   padding: 2rem 1rem;
-  margin-top: 5rem;
-  font-size: 18px;
+  margin-top: 3rem;
+  font-size: 12px;
 }
 
 .intro_span {

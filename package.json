@@ -1,10 +1,10 @@
 {
-  "name": "react-easy-blog-post-component",
+  "name": "react-easy-blog-post",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "chthve",
   "license": "MIT",
-  "repository": "chthve/react-easy-blog-post-component",
+  "repository": "chthve/react-easy-blog-post",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",

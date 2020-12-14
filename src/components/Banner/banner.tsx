@@ -23,13 +23,13 @@ export interface BannerProps {
 }
 
 const defaultTheme = {
-  width: '800px',
-  height: '500px',
+  width: '550px',
+  height: '400px',
   style: 1,
   fontColor: 'black',
   hoverButton: true,
-  largeFont: '20px',
-  mediumFont: '16px',
+  largeFont: '18px',
+  mediumFont: '14px',
   fontFamily: 'New Times Roman',
   primary: 'white'
 }

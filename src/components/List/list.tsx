@@ -30,11 +30,11 @@ export interface ListProps {
 }
 
 const defaultTheme = {
-  width: '700px',
+  width: '50px',
   height: '170px',
-  smallFont: '14px',
-  mediumFont: '16px',
-  largeFont: '16px',
+  smallFont: '10px',
+  mediumFont: '12px',
+  largeFont: '14px',
   fontFamily: 'New Times Roman',
   fontColor: 'black',
   imagePosition: 'left',

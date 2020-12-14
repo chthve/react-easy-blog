@@ -20,7 +20,7 @@
     "prismjs": "^1.22.0",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
-    "react-easy-blog-post-component": "file:..",
+    "react-easy-blog-post": "file:..",
     "react-scripts": "file:../node_modules/react-scripts",
     "typescript": "file:../node_modules/typescript"
   },

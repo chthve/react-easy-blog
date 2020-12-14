@@ -73,10 +73,10 @@ export const BannerButton = styled.button`
   background: transparent;
   color: ${(props: any) => props.theme.fontColor};
   font-weight: bold;
-  font-size: 1rem;
+  font-size: ${(props: any) => props.theme.mediumFont};
   padding: 1rem 2rem;
   margin: 1rem;
-  border: solid 2px ${(props: any) => props.theme.fontColor};
+  border: solid 1px ${(props: any) => props.theme.fontColor};
   outline: none;
   transition: 0.2s;
   &:hover {
