@@ -5,6 +5,6 @@ export interface TitleProps {
   content?: string
 }
 
-export default function Title({ content }: TitleProps) {
+export const Title: React.FC<TitleProps> = ({ content }: TitleProps) => {
   return <TitleText>{content}</TitleText>
 }

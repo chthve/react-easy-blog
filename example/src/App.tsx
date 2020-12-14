@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { Banner, Card, List } from 'react-easy-blog-post-component'
-import FontSelector from './html-components/fontSelector'
-import Color from './html-components/color'
-import Size from './html-components/size'
-import ComponentStyle from './html-components/style'
-import OptionsContainer from './html-components/container'
+import { Intro } from './components/intro'
+import { Article } from './components/article'
+import { FontSelector } from './components/fontSelector'
+import { Color } from './components/color'
+import { Size } from './components/size'
+import { ComponentStyle } from './components/style'
+import { OptionsContainer } from './components/container'
+import { CodeSnippet } from './components/codeSnippet'
 
 const App = () => {
   const [component, setComponent] = useState('banner')
@@ -23,11 +26,7 @@ const App = () => {
     author: 'Charles Bukowski',
     date: 1605188922555
   })
-  const handleInputChange = (e: any, identifier: any) => {
-    const newArticle = { ...article }
-    newArticle[identifier] = e.target.value
-    setArticle(newArticle)
-  }
+
   return (
     <>
       <div className='main-container'>
@@ -44,38 +43,8 @@ const App = () => {
         </div>
         <div className='right-container'>
           <h1>Save some time to create your post !</h1>
-          <h2>Compose your article</h2>
-          <div className='separation-line'>
-            <hr />
-          </div>
-          <div className='article-container'>
-            <label className='label'>Image</label>
-            <input
-              className='input'
-              onChange={(e) => handleInputChange(e, 'image')}
-              placeholder='Pass in a URL'
-            />
-            <label className='label'>Title</label>
-            <input
-              className='input'
-              onChange={(e) => handleInputChange(e, 'title')}
-            />
-            <label className='label'>Description</label>
-            <input
-              className='input'
-              onChange={(e) => handleInputChange(e, 'description')}
-            />
-            <label className='label'>Category</label>
-            <input
-              className='input'
-              onChange={(e) => handleInputChange(e, 'category')}
-            />
-            <label className='label'>Author</label>
-            <input
-              className='input'
-              onChange={(e) => handleInputChange(e, 'author')}
-            />
-          </div>
+          <Intro />
+          <Article article={article} setArticle={setArticle} />
           <ComponentStyle component={component} setComponent={setComponent} />
           <Size theme={theme} setTheme={setTheme} style={component} />
           <FontSelector theme={theme} setTheme={setTheme} />
@@ -90,6 +59,14 @@ const App = () => {
             setShowCategory={setShowCategory}
             hover={hover}
             setHover={setHover}
+          />
+          <CodeSnippet
+            article={article}
+            theme={theme}
+            socialMedia={socialMedia}
+            showCategory={showCategory}
+            hover={hover}
+            component={component}
           />
         </div>
       </div>

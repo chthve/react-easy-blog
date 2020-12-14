@@ -6,7 +6,11 @@ export interface SizeProps {
   style: string
 }
 
-export default function Size({ theme, setTheme, style }: SizeProps) {
+export const Size: React.FC<SizeProps> = ({
+  theme,
+  setTheme,
+  style
+}: SizeProps) => {
   console.log(theme)
   function handleChange(e: any) {
     let { name, value } = e.target

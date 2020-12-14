@@ -111,3 +111,7 @@ export const CategoryText = styled.p`
   color: ${(props: any) => props.theme.secondary};
   text-align: center;
 `
+
+export const Route = styled.a`
+  cursor: pointer;
+`

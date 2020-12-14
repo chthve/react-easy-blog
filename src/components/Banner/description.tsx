@@ -5,6 +5,8 @@ export interface DescriptionProps {
   content?: string
 }
 
-export default function Description({ content }: DescriptionProps) {
+export const Description: React.FC<DescriptionProps> = ({
+  content
+}: DescriptionProps) => {
   return <BannerDescription>{content}</BannerDescription>
 }

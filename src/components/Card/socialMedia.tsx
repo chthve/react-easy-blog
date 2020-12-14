@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { SocialMediaContainer, Button, Link } from './styles'
 
-export default function SocialMedia() {
+export const SocialMedia: React.FC = () => {
   return (
     <SocialMediaContainer>
       <Button>

@@ -1,24 +1,25 @@
 import React from 'react'
-import Button from './button'
-import Title from './title'
+import { Button } from './button'
+import { Title } from './title'
 import { BannerTextContainer } from './styles'
-import Description from './description'
+import { Description } from './description'
 
 export interface TextProps {
-  article: {
+  article?: {
     image?: string
     title?: string
     description?: string
   }
+  route?: string
   style?: number
 }
 
-export default function Text({ article }: TextProps) {
+export const Text: React.FC<TextProps> = ({ article, route }: TextProps) => {
   return (
     <BannerTextContainer>
-      <Title content={article.title} />
-      <Description content={article.description} />
-      <Button />
+      <Title content={article && article.title} />
+      <Description content={article && article.description} />
+      <Button route={route} />
     </BannerTextContainer>
   )
 }

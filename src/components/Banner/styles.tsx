@@ -86,3 +86,7 @@ export const BannerButton = styled.button`
     color: ${(props: any) =>
       props.theme.hoverButton ? props.theme.primary : props.theme.fontColor};
 `
+
+export const Route = styled.a`
+  cursor: pointer;
+`

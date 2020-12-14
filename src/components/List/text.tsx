@@ -1,9 +1,9 @@
 import * as React from 'react'
-import Description from './description'
+import { Description } from './description'
 import { InfoContainer, TextContainer } from './styles'
-import Title from './title'
-import Author from './author'
-import Date from './date'
+import { Title } from './title'
+import { Author } from './author'
+import { Date } from './date'
 
 export interface TextProps {
   article?: {
@@ -15,7 +15,7 @@ export interface TextProps {
   }
 }
 
-export default function Text({ article }: TextProps) {
+export const Text: React.FC<TextProps> = ({ article }: TextProps) => {
   return (
     <TextContainer>
       <Title content={article && article.title} />

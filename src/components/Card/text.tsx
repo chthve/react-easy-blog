@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-import Category from './category'
-import Title from './title'
-import Description from './description'
-import Author from './author'
-import Date from './date'
+import { Category } from './category'
+import { Title } from './title'
+import { Description } from './description'
+import { Author } from './author'
+import { Date } from './date'
 
 import styled from 'styled-components'
 
@@ -28,7 +28,7 @@ const Div = styled.div`
   text-align: center;
 `
 
-export default function Text({ article }: TextProps) {
+export const Text: React.FC<TextProps> = ({ article }: TextProps) => {
   return (
     <Div>
       <Category content={article.category} />

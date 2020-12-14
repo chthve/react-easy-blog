@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { ThemeProvider } from 'styled-components'
-import Image from './image'
+import { Image } from './image'
 import { ListContainer, Separation } from './styles'
-import Text from './text'
-import Category from './category'
+import { Text } from './text'
+import { Category } from './category'
 
 export interface ListProps {
   article?: {
@@ -26,6 +26,7 @@ export interface ListProps {
     largeFont?: string
   }
   showCategory?: boolean
+  route?: string
 }
 
 const defaultTheme = {
@@ -41,13 +42,18 @@ const defaultTheme = {
   secondary: 'white'
 }
 
-export default function List({ article, theme, showCategory }: ListProps) {
+export default function List({
+  article,
+  theme,
+  showCategory,
+  route
+}: ListProps) {
   Object.assign(defaultTheme, theme)
   return (
     <ThemeProvider theme={defaultTheme}>
       <ListContainer>
         {showCategory && <Category content={article && article.category} />}
-        <Image image={article && article.image} />
+        <Image image={article && article.image} route={route} />
         <Text article={article && article} />
         <Separation />
       </ListContainer>

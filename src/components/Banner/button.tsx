@@ -1,6 +1,14 @@
 import * as React from 'react'
-import { BannerButton } from './styles'
+import { BannerButton, Route } from './styles'
 
-export default function Button() {
-  return <BannerButton>Read More</BannerButton>
+interface ButtonProps {
+  route?: string
+}
+
+export const Button: React.FC<ButtonProps> = ({ route }: ButtonProps) => {
+  return (
+    <Route href={route}>
+      <BannerButton>Read More</BannerButton>
+    </Route>
+  )
 }

@@ -5,6 +5,6 @@ export interface ImageProps {
   image?: string
 }
 
-export default function Image({ image }: ImageProps) {
+export const Image: React.FC<ImageProps> = ({ image }: ImageProps) => {
   return <BannerImage src={image} />
 }

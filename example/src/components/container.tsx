@@ -16,7 +16,7 @@ export interface OptionsContainerProps {
   setHover?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function OptionsContainer({
+export const OptionsContainer: React.FC<OptionsContainerProps> = ({
   style,
   theme,
   setTheme,
@@ -26,7 +26,7 @@ export default function OptionsContainer({
   setShowCategory,
   hover,
   setHover
-}: OptionsContainerProps) {
+}: OptionsContainerProps) => {
   function handleSocialMedia(state: boolean) {
     setSocialMedia && setSocialMedia(state)
   }

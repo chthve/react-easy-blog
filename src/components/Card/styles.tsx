@@ -121,3 +121,7 @@ export const InfoText = styled.p`
   color: ${(props: any) => props.theme.primary};
   margin: 2rem;
 `
+
+export const Route = styled.a`
+  cursor: pointer;
+`

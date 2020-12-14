@@ -8,8 +8,9 @@ export interface DateProps {
   content?: number
 }
 
-export default function Date({ content, format }: DateProps) {
-  const DatePost = moment(content).format(format ? format : 'DD-MMM-YY')
+export const Date: React.FC<DateProps> = ({ content, format }: DateProps) => {
+  format = format || 'DD-MMM-YY'
+  const DatePost = moment(content).format(format)
 
   return <InfoText>{DatePost}</InfoText>
 }

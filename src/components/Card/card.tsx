@@ -2,8 +2,8 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { CardContainer } from './styles'
 
-import Image from './image'
-import Text from './text'
+import { Image } from './image'
+import { Text } from './text'
 
 interface CardProps {
   article: {
@@ -29,6 +29,7 @@ interface CardProps {
   }
   dateFormat?: string
   socialMedia?: boolean
+  route?: string
 }
 
 const defaultTheme = {
@@ -45,12 +46,17 @@ const defaultTheme = {
   width: '460px'
 }
 
-export default function Card({ article, theme, socialMedia }: CardProps) {
+export default function Card({
+  article,
+  theme,
+  socialMedia,
+  route
+}: CardProps) {
   Object.assign(defaultTheme, theme)
   return (
     <ThemeProvider theme={defaultTheme}>
       <CardContainer>
-        <Image image={article.image} socialMedia={socialMedia} />
+        <Image image={article.image} socialMedia={socialMedia} route={route} />
         <Text article={article} />
       </CardContainer>
     </ThemeProvider>

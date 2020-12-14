@@ -5,7 +5,9 @@ export interface CategoryProps {
   content?: string
 }
 
-export default function Category({ content }: CategoryProps) {
+export const Category: React.FC<CategoryProps> = ({
+  content
+}: CategoryProps) => {
   return (
     <CategoryContainer>
       <CategoryText>{content}</CategoryText>

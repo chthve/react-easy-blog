@@ -5,7 +5,10 @@ export interface ColorProps {
   setTheme: React.Dispatch<React.SetStateAction<{}>>
 }
 
-export default function Color({ theme, setTheme }: ColorProps) {
+export const Color: React.FC<ColorProps> = ({
+  theme,
+  setTheme
+}: ColorProps) => {
   function handleChange(e: any) {
     const { name, value } = e.target
     setTheme({ ...theme, [name]: value })

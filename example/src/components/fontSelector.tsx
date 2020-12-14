@@ -20,21 +20,21 @@ const fonts: string[] = [
   'Bookman',
   'New Century Schoolbook',
   'American Typewriter',
-  'serif',
+  'Serif',
   'Andale Mono',
   'Courier New',
   'Courier',
   'FreeMono',
   'OCR A Std',
   'DejaVu Sans Mono',
-  'monospace',
+  'Monospace',
   'Comic Sans MS',
   'Apple Chancery',
   'Bradley Hand',
   'Brush Script MT',
   'Snell Roundhand',
   'URW Chancery L',
-  'cursive',
+  'Cursive',
   'Impact',
   'Luminari',
   'Chalkduster',
@@ -43,7 +43,7 @@ const fonts: string[] = [
   'Stencil Std',
   'Marker Felt',
   'Trattatello',
-  'fantasy'
+  'Fantasy'
 ]
 
 interface FontSelectorProps {
@@ -55,7 +55,10 @@ interface FontSelectorProps {
   setTheme: React.Dispatch<React.SetStateAction<{}>>
 }
 
-export default function FontSelector({ setTheme, theme }: FontSelectorProps) {
+export const FontSelector: React.FC<FontSelectorProps> = ({
+  setTheme,
+  theme
+}: FontSelectorProps) => {
   function handleChange(e: any) {
     let { name, value } = e.target
     value =

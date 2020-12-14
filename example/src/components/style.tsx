@@ -5,10 +5,10 @@ export interface ComponentStyleProps {
   setComponent: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function ComponentStyle({
+export const ComponentStyle: React.FC<ComponentStyleProps> = ({
   component,
   setComponent
-}: ComponentStyleProps) {
+}: ComponentStyleProps) => {
   const handleClick = (component: any) => {
     setComponent(component)
   }

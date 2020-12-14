@@ -5,6 +5,6 @@ export interface AuthorProps {
   content?: string
 }
 
-export default function Author({ content }: AuthorProps) {
+export const Author: React.FC<AuthorProps> = ({ content }: AuthorProps) => {
   return <InfoText>{content}</InfoText>
 }

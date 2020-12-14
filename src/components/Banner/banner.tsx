@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import { BannerContainer } from './styles'
-import Image from './image'
-import Text from './text'
+import { Image } from './image'
+import { Text } from './text'
 
 export interface BannerProps {
-  article: {
+  article?: {
     author?: string
     category?: string
     title?: string
@@ -19,6 +19,7 @@ export interface BannerProps {
     height?: string
   }
   hover?: boolean
+  route?: string
 }
 
 const defaultTheme = {
@@ -33,7 +34,7 @@ const defaultTheme = {
   primary: 'white'
 }
 
-export default function Banner({ article, theme, hover }: BannerProps) {
+export default function Banner({ article, theme, hover, route }: BannerProps) {
   Object.assign(defaultTheme, theme)
   const [isShown, setIsShown] = useState(false)
   function toggleShow() {
@@ -46,14 +47,14 @@ export default function Banner({ article, theme, hover }: BannerProps) {
           onMouseEnter={() => toggleShow()}
           onMouseLeave={() => toggleShow()}
         >
-          <Image image={article.image} />
-          {isShown && <Text article={article} />}
+          <Image image={article && article.image} />
+          {isShown && <Text article={article} route={route} />}
         </BannerContainer>
       )}
       {!hover && (
         <BannerContainer>
-          <Image image={article.image} />
-          <Text article={article} />
+          <Image image={article && article.image} />
+          <Text article={article && article} route={route} />
         </BannerContainer>
       )}
     </ThemeProvider>

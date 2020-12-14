@@ -1,17 +1,24 @@
 import * as React from 'react'
-import SocialMedia from './socialMedia'
-import { ImageContainer, Img } from './styles'
+import { SocialMedia } from './socialMedia'
+import { ImageContainer, Img, Route } from './styles'
 
 export interface ImageProps {
   image?: string
   socialMedia?: boolean
+  route?: string
 }
 
-export default function Image({ image, socialMedia }: ImageProps) {
+export const Image: React.FC<ImageProps> = ({
+  image,
+  socialMedia,
+  route
+}: ImageProps) => {
   return (
     <ImageContainer>
-      <Img src={image} />
-      {socialMedia && <SocialMedia />}
+      <Route href={route}>
+        <Img src={image} />
+        {socialMedia && <SocialMedia />}
+      </Route>
     </ImageContainer>
   )
 }
