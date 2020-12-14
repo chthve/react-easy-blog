@@ -56,7 +56,7 @@ export const Button = styled.button`
   height: ${(props: any) =>
     props.theme.socialMediaBackground ? '65%' : '80%'};
   width: auto;
-  font-size: 0.75rem;
+  font-size: ${(props: any) => props.theme.smallFont};
   padding: 0 0.4rem;
   margin-bottom: ${(props: any) =>
     props.theme.socialMediaBackground ? 'none' : '0.5rem'};
