@@ -1,29 +1,64 @@
-# react-easy-blog-post-component
+# React-easy-blog-post
 
-> Made with create-react-library
+`React-easy-blog-post` is an open source project, published on NPM that allows you to create in a fraction of time your future blog post ! ✍️
 
-[![NPM](https://img.shields.io/npm/v/react-easy-blog-post-component.svg)](https://www.npmjs.com/package/react-easy-blog-post-component) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
+## Getting-Started
 
 ```bash
-npm install --save react-easy-blog-post-component
+npm install react-easy-blog-post-component
 ```
 
-## Usage
+## Screenshot
 
-```tsx
-import React, { Component } from 'react'
+<div align="center">
+  <img width="600px" src="example/public/screenshot.png"/>
+</div>
 
-import MyComponent from 'react-easy-blog-post-component'
-import 'react-easy-blog-post-component/dist/index.css'
+### How to use
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+Nothing as easy ! Go have a look at the [DEMO](https://chthve.github.io/react-easy-blog-post/)
+
+**Step 1:** Import the component
+
+Make your choice first (Banner, Card or List) and import it right here 👇
+
+```js
+import <Your Choice*> from 'react-easy-blog-post';
+```
+
+**Step 2:** Simply use it in your app ! Example:
+
+```typescript jsx
+  <Banner article={article} theme={height: "668px",
+    width: "652px",
+    fontFamily: "Gill Sans",
+    smallFont: "9px",
+    mediumFont: "15px",
+    largeFont: "22px",
+    primary: "#a62626",
+    secondary: "#b20a0a",
+    style: "2",} hover=true />
+```
+
+## Configuration
+
+### Data Format
+
+**Your article is an object and should be like that:**
+
+```typescript jsx
+article={
+  author:Charles Bukowsk
+  category: Poetry
+  title: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. description: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  date: 1605188922555
+  image: https://images.unsplash.com/photo-1605453302863-85c32f2adc76?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
   }
-}
 ```
+
+### Author
+
+- Charles-Thibault Verrier - [GitHub](https://github.com/chthve)
 
 ## License
 
