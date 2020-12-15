@@ -23,7 +23,7 @@ Nothing as easy ! Go have a look at the [DEMO](https://chthve.github.io/react-ea
 Make your choice first (Banner, Card or List) and import it right here 👇
 
 ```js
-import <Your Choice*> from 'react-easy-blog-post';
+import {<Your Choice*>} from 'react-easy-blog-post';
 ```
 
 **Step 2:** Simply use it in your app ! Example:
