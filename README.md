@@ -58,7 +58,7 @@ const article={
 
 ### Author
 
-- Charles-Thibault Verrier - [GitHub](https://github.com/chthve)
+- Charles-Thibault Verrier - [GitHub](https://github.com/chthve) - [Linkedin](https://linkedin.com/in/chthve)
 
 ## License
 
